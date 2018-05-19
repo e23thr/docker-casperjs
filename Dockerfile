@@ -8,7 +8,6 @@ RUN apt-get update \
   && npm install -g casperjs \
   && rm -rf /var/lib/apt/lists/*
 
-
 # install requirements
 #RUN apt-get install -y python2.7 python-pip
 # RUN apt-get install build-essential g++ flex bison gperf ruby perl \

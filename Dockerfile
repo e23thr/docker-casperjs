@@ -1,6 +1,9 @@
 FROM node:8.11.2
+
 MAINTAINER porpldev@gmail.com
+
 ENV CASPERJS_VERSION=1.1.4
+ENV PHANTOMJS_VERSION=2.1.1
 
 RUN apt-get update \
   && apt-get install -y python2.7 python-pip \

@@ -26,7 +26,9 @@ ADD phantomjs /usr/local/bin
 #CMD ls /usr/local/bin
 # CMD echo $PATH
 #CMD casperjs
+
 VOLUME /script
+
 WORKDIR /script
 # CMD ["ls", "/script"]
 # EXPOSE port_num port_num ...

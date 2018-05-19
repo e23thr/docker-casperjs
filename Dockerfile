@@ -8,28 +8,13 @@ RUN apt-get update \
   && npm install -g casperjs \
   && rm -rf /var/lib/apt/lists/*
 
-# install requirements
-#RUN apt-get install -y python2.7 python-pip
-# RUN apt-get install build-essential g++ flex bison gperf ruby perl \
-#   libsqlite3-dev libfontconfig1-dev libicu-dev libfreetype6 libssl-dev \
-#   libpng-dev libjpeg-dev python libx11-dev libxext-dev
-
-#RUN mkdir -p /usr/src
-
-#install phantomjs
+#add phantomjs binary to docker image
 ADD phantomjs /usr/local/bin
 
-# install casperjs (currently 1.1.4)
-#RUN npm install -g casperjs
-
-#WORKDIR /usr/src
-#CMD ls /usr/local/bin
-# CMD echo $PATH
-#CMD casperjs
+# CMD ["ls", "/script"]
+# EXPOSE port_num port_num ...
 
 VOLUME /script
 
 WORKDIR /script
-# CMD ["ls", "/script"]
-# EXPOSE port_num port_num ...
 ENTRYPOINT ["casperjs"]
